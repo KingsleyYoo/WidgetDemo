@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 蓝色 -->
+    <!--<solid android:color="#64A7DB" />-->
+    <!-- 黑色透明 -->
+    <!--<solid android:color="#e0000000" />-->
+    <!-- 透明 -->
+    <!--<solid android:color="#80464849" />-->
+
+    <!-- 渐变色 红色-->
+    <!--<gradient-->
+    <!--android:angle="45"-->
+    <!--android:endColor="#80FF00FF"-->
+    <!--android:startColor="#FFFF0000" />-->
+
+    <!-- 渐变色 蓝色 绿色-->
+    <gradient
+        android:angle="45"
+        android:endColor="#ab00ffb2"
+        android:startColor="#c50077ff" />
+
+    <corners
+        android:bottomLeftRadius="60dp"
+        android:bottomRightRadius="60dp"
+        android:topLeftRadius="60dp"
+        android:topRightRadius="60dp" />
+
+</shape>
