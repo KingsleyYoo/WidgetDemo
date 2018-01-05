@@ -1,4 +1,4 @@
-package com.king.widget.widgetdemo;
+package com.king.widget.widgetdemo.activity;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -27,11 +27,19 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.king.widget.widgetdemo.R;
+
 import java.util.Calendar;
 
 import receiver.OneShotAlarm;
 import widget.MyToast;
 
+/**
+ * FileName: MainActivity
+ * Author: YuXin
+ * Date: 2018/1/5 14:17
+ * Describe: 主页
+ */
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     public static final String TAG = "MainActivity";
@@ -47,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Button mBtn_snackbar;
     private Button mBtn_progress;
     private ProgressBar mProgressBar;
+    private boolean isShowProcessBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,8 +191,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.btn_showProgress:
-
-                mProgressBar.setVisibility(View.VISIBLE);
+                if (!isShowProcessBar) {
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    isShowProcessBar = true;
+                } else {
+                    mProgressBar.setVisibility(View.GONE);
+                }
 
                 break;
 

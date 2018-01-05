@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.king.widget.widgetdemo.MainActivity;
+import com.king.widget.widgetdemo.activity.MainActivity;
 
 /**
  * <b>Create Date:</b> 2017/3/23<br>
