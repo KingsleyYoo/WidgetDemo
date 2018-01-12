@@ -7,7 +7,6 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.TypedValue;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -45,9 +44,10 @@ public class AutosizingTextViewActivity extends AppCompatActivity {
                 // 该TextView中已配置了AutoSize属性
                 mTvAutoTextView.setText(inputText);
 
-                // 如果该TextView在xml中没有配置AutoSizeAutoSize，则可以通过代码动态设置
-                mTvAutoTextView.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
-                mTvAutoTextView.setAutoSizeTextTypeUniformWithConfiguration(10, 80, 10, TypedValue.COMPLEX_UNIT_SP);
+                // 如果该TextView在xml中没有配置AutoSizeAutoSize，则可以通过代码动态设置；只能适用在API26以上
+//                mTvAutoTextView.setAutoSizeTextTypeWithDefaults(TextView.AUTO_SIZE_TEXT_TYPE_UNIFORM);
+//                mTvAutoTextView.setAutoSizeTextTypeUniformWithConfiguration(10, 80, 10, TypedValue.COMPLEX_UNIT_SP);
+//                mTvAutoTextView.setText(inputText);
 
                 float textSize = mTvAutoTextView.getTextSize();
                 mTvTextSize.setText("TextSize: " + String.valueOf(textSize));
