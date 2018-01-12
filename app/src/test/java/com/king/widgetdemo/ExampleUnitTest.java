@@ -1,4 +1,4 @@
-package com.king.widget.widgetdemo;
+package com.king.widgetdemo;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.king.widget.widgetdemo">
+    package="com.king.widgetdemo">
 
     <application
         android:allowBackup="true"
@@ -22,11 +22,11 @@
 
         <!-- 闹钟广播 -->
         <receiver
-            android:name="receiver.OneShotAlarm"
+            android:name=".receiver.OneShotAlarm"
             android:process=":remote"/>
 
         <!-- 开机广播 -->
-        <receiver android:name="service.BootReceiver">
+        <receiver android:name=".service.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
 
@@ -34,5 +34,7 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".activity.AutosizingTextViewActivity"></activity>
     </application>
+
 </manifest>

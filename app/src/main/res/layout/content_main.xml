@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.king.widget.widgetdemo.activity.MainActivity"
+    tools:context=".activity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <TextView
@@ -19,140 +18,155 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="5dp">
-
-        <!--<data>-->
-
-        <!--<variable-->
-        <!--name="demo"-->
-        <!--type="com.yuxin.appdemo.MainActivity" />-->
-        <!--</data>-->
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/activity_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp">
 
-            <Button
-                android:id="@+id/btn_send_broadcast"
+            <!--<data>-->
+
+            <!--<variable-->
+            <!--name="demo"-->
+            <!--type="com.yuxin.appdemo.MainActivity" />-->
+            <!--</data>-->
+
+            <LinearLayout
+                android:id="@+id/activity_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5秒后接受广播"/>
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-            <!--<Button-->
-            <!--android:id="@+id/btn_click_delay"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:background="#FF8800"-->
-            <!--android:textColor="#ffffff"-->
-            <!--android:textSize="16sp"-->
-            <!--app:onClickDelay="@{demo.onclick}"-->
-            <!--app:delay="1000"-->
-            <!--tools:text="点击之后延时一秒" />-->
+                <Button
+                    android:id="@+id/btn_send_broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5秒后接受广播"/>
 
-            <Button
-                android:id="@+id/btn_showDialog"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="弹出确认框"/>
+                <!--<Button-->
+                <!--android:id="@+id/btn_click_delay"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#FF8800"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="16sp"-->
+                <!--app:onClickDelay="@{demo.onclick}"-->
+                <!--app:delay="1000"-->
+                <!--tools:text="点击之后延时一秒" />-->
 
-            <Button
-                android:id="@+id/btn_getcache"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="获取其他应用的缓存"/>
+                <Button
+                    android:id="@+id/btn_showDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="弹出确认框"/>
 
-            <TextView
-                android:id="@+id/tv_showcache"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/picton_blue"
-                android:gravity="center"
-                android:hint="显示缓存数据"
-                android:textColor="#ffffff"
-                android:textSize="16sp"/>
+                <Button
+                    android:id="@+id/btn_getcache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="获取其他应用的缓存"/>
 
-            <Button
-                android:id="@+id/btn_showToast"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="弹出自定义Toast"/>
+                <TextView
+                    android:id="@+id/tv_showcache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/picton_blue"
+                    android:gravity="center"
+                    android:hint="显示缓存数据"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"/>
 
-            <Button
-                android:id="@+id/btn_snackBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="弹出SnackBar"/>
+                <Button
+                    android:id="@+id/btn_showToast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="弹出自定义Toast"
+                    android:textAllCaps="false"/>
 
-            <Button
-                android:id="@+id/btn_showProgress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="显示进度圈"/>
+                <Button
+                    android:id="@+id/btn_snackBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="弹出SnackBar"
+                    android:textAllCaps="false"/>
 
-            <ProgressBar
-                android:id="@+id/pb_progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:indeterminateDrawable="@drawable/progress_small"
-                android:visibility="gone"/>
+                <Button
+                    android:id="@+id/btn_showProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="显示进度圈"/>
 
-            <TextView
+                <ProgressBar
+                    android:id="@+id/pb_progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateDrawable="@drawable/progress_small"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:elevation="1dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="elevation 1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:elevation="3dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="elevation 3"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:elevation="5dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="elevation 5"/>
+
+                <Button
+                    android:id="@+id/btn_auto_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Autosizing TextViews"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
-                android:elevation="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:gravity="center"
-                android:text="elevation 1"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
-                android:elevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:gravity="center"
-                android:text="elevation 3"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"
-                android:background="@color/white"
-                android:elevation="5dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:gravity="center"
-                android:text="elevation 5"/>
+                android:background="@color/black"/>
 
         </LinearLayout>
 
-        <android.support.design.widget.CoordinatorLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:background="@color/black">
-        </android.support.design.widget.CoordinatorLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.king.widget.widgetdemo"
+        applicationId "com.king.com.king.widgetdemo.widget.widgetdemo"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1

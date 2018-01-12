@@ -1,4 +1,4 @@
-package widget;
+package com.king.widgetdemo.widget;
 
 import android.content.Context;
 import android.os.Handler;

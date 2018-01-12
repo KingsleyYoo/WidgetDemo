@@ -1,4 +1,4 @@
-package receiver;
+package com.king.widgetdemo.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

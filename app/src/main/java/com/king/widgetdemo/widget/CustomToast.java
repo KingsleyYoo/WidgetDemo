@@ -1,4 +1,4 @@
-package widget;
+package com.king.widgetdemo.widget;
 
 import android.content.Context;
 import android.os.Handler;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.king.widget.widgetdemo.R;
+import com.king.widgetdemo.R;
 
 /**
  * <b>Create Date:</b> 2017/3/28<br>

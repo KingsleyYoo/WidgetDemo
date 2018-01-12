@@ -1,4 +1,4 @@
-package service;
+package com.king.widgetdemo.service;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.king.widget.widgetdemo.activity.MainActivity;
+import com.king.widgetdemo.activity.MainActivity;
 
 /**
  * <b>Create Date:</b> 2017/3/23<br>

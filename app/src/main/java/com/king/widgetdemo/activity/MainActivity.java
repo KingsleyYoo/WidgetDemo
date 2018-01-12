@@ -1,4 +1,4 @@
-package com.king.widget.widgetdemo.activity;
+package com.king.widgetdemo.activity;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -27,12 +27,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.king.widget.widgetdemo.R;
+import com.king.widgetdemo.R;
+import com.king.widgetdemo.receiver.OneShotAlarm;
+import com.king.widgetdemo.widget.MyToast;
 
 import java.util.Calendar;
-
-import receiver.OneShotAlarm;
-import widget.MyToast;
 
 /**
  * FileName: MainActivity
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Button mBtn_progress;
     private ProgressBar mProgressBar;
     private boolean isShowProcessBar;
+    private Button mBtnAutoSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mBtn_snackbar = (Button) findViewById(R.id.btn_snackBar);
         mBtn_progress = (Button) findViewById(R.id.btn_showProgress);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_progressBar);
+        mBtnAutoSize = (Button) findViewById(R.id.btn_auto_size);
 
         mBtn_broadcast.setOnClickListener(this);
         mBtn_dialog.setOnClickListener(this);
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         mBtn_showToast.setOnClickListener(this);
         mBtn_snackbar.setOnClickListener(this);
         mBtn_progress.setOnClickListener(this);
+        mBtnAutoSize.setOnClickListener(this);
     }
 
     @Override
@@ -173,7 +175,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     myToast.show(5000);
                 }
 
-
                 break;
 
             case R.id.btn_snackBar:
@@ -187,7 +188,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                             }
                         }).show();
 
-
                 break;
 
             case R.id.btn_showProgress:
@@ -197,6 +197,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 } else {
                     mProgressBar.setVisibility(View.GONE);
                 }
+
+                break;
+
+            case R.id.btn_auto_size:
+                Intent intent = new Intent(MainActivity.this, AutosizingTextViewActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
 
                 break;
 

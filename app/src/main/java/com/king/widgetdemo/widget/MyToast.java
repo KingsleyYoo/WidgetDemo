@@ -1,4 +1,4 @@
-package widget;
+package com.king.widgetdemo.widget;
 
 import android.content.Context;
 import android.os.Handler;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.king.widget.widgetdemo.R;
+import com.king.widgetdemo.R;
 
 
 /**
