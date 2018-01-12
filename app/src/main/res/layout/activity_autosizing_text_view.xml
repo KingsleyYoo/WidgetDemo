@@ -22,17 +22,18 @@
         <TextView
             android:id="@+id/tv_auto_text_view"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_marginTop="5dp"
             android:background="@color/colorAccent"
-            android:padding="15dp"
             android:textColor="@android:color/white"
-            app:autoSizeMaxTextSize="100sp"
-            app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="2sp"
-            app:autoSizeTextType="uniform"
-            tools:ignore="MissingPrefix"
+
             tools:text="11234456"/>
+
+        <!--app:autoSizeMaxTextSize="80sp"-->
+        <!--app:autoSizeMinTextSize="12sp"-->
+        <!--app:autoSizeStepGranularity="10sp"-->
+        <!--app:autoSizeTextType="uniform"-->
+        <!--tools:ignore="MissingPrefix"-->
 
         <TextView
             android:id="@+id/tv_text_size"
@@ -41,6 +42,7 @@
             android:layout_marginTop="10dp"
             android:background="@android:color/holo_blue_light"
             android:gravity="center_vertical"
+            android:padding="5dp"
             tools:text="TextSize: 60sp"/>
 
     </LinearLayout>
